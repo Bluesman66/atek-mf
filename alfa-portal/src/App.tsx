@@ -1,10 +1,10 @@
+import s from "./index.module.scss";
+
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.css";
-
 const App = () => (
-  <div className="container">
+  <div className={s.container}>
     <div>Name: alfa-portal</div>
     <div>Framework: react</div>
     <div>Language: TypeScript</div>
