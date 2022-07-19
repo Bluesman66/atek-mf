@@ -33,30 +33,54 @@ console.log("===================================================================
 var hostPath = resolve(__dirname, "./host");
 cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: hostPath, stdio: "inherit" });
 
-// mf-home
-var homePath = resolve(__dirname, "./home");
-cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: homePath, stdio: "inherit" });
+// mf-layouts
+var layoutsPath = resolve(__dirname, "./layouts");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: layoutsPath, stdio: "inherit" });
+
+// mf-cabinet
+var cabinetPath = resolve(__dirname, "./cabinet");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: cabinetPath, stdio: "inherit" });
 
 // mf-catalog
 var catalogPath = resolve(__dirname, "./catalog");
 cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: catalogPath, stdio: "inherit" });
 
+// mf-chat
+var chatPath = resolve(__dirname, "./chat");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: chatPath, stdio: "inherit" });
+
+// mf-constructor
+var constructorPath = resolve(__dirname, "./constructor");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: constructorPath, stdio: "inherit" });
+
+// mf-contact
+var contactPath = resolve(__dirname, "./contact");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: contactPath, stdio: "inherit" });
+
+// mf-equipment
+var equipmentPath = resolve(__dirname, "./equipment");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: equipmentPath, stdio: "inherit" });
+
 // mf-news
 var newsPath = resolve(__dirname, "./news");
 cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: newsPath, stdio: "inherit" });
 
-// mf-command
-var commandPath = resolve(__dirname, "./command");
-cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: commandPath, stdio: "inherit" });
+// mf-search
+var searchPath = resolve(__dirname, "./search");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: searchPath, stdio: "inherit" });
 
-// alfa-portal
-var alfaPortalPath = resolve(__dirname, "./alfa-portal");
-cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: alfaPortalPath, stdio: "inherit" });
+// mf-support
+var supportPath = resolve(__dirname, "./support");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: supportPath, stdio: "inherit" });
 
-// header
-var headerPath = resolve(__dirname, "./header");
-cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: headerPath, stdio: "inherit" });
+// mf-user
+var userPath = resolve(__dirname, "./user");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: userPath, stdio: "inherit" });
 
-// footer
-var footerPath = resolve(__dirname, "./footer");
-cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: footerPath, stdio: "inherit" });
+// mf-widget
+var widgetPath = resolve(__dirname, "./widget");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: widgetPath, stdio: "inherit" });
+
+// mf-wishlist
+var wishlistPath = resolve(__dirname, "./wishlist");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: wishlistPath, stdio: "inherit" });
