@@ -29,6 +29,10 @@ console.log("===================================================================
 console.log(`Starting the json-server and the apps`);
 console.log("===================================================================");
 
+// mf-host
+var hostPath = resolve(__dirname, "./host");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: hostPath, stdio: "inherit" });
+
 // mf-home
 var homePath = resolve(__dirname, "./home");
 cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: homePath, stdio: "inherit" });

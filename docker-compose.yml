@@ -1,50 +1,26 @@
 version: "3.8"
 services:
+  mf-host:
+    build:
+      context: ./host
+    ports:
+      - "3000:3000"
+    container_name: mf-host
+    command: npm run start
+
   mf-home:
     build:
       context: ./home
     ports:
-      - "3000:3000"
-    container_name: mf-home
-    command: npm run start
-
-  mf-catalog:
-    build:
-      context: ./catalog
-    ports:
       - "3001:3001"
-    container_name: mf-catalog
-    command: npm run start
-
-  mf-news:
-    build:
-      context: ./news
-    ports:
-      - "3002:3002"
-    container_name: mf-news
-    command: npm run start
-
-  mf-command:
-    build:
-      context: ./command
-    ports:
-      - "3003:3003"
-    container_name: mf-command
-    command: npm run start
-
-  mf-alfa-portal:
-    build:
-      context: "./alfa-portal"
-    ports:
-      - "3004:3004"
-    container_name: mf-alfa-portal
+    container_name: mf-home
     command: npm run start
 
   mf-header:
     build:
       context: "./header"
     ports:
-      - "3005:3005"
+      - "3002:3002"
     container_name: mf-header
     command: npm run start
 
@@ -52,6 +28,38 @@ services:
     build:
       context: "./footer"
     ports:
-      - "3006:3006"
+      - "3003:3003"
     container_name: mf-footer
+    command: npm run start
+
+  mf-catalog:
+    build:
+      context: ./catalog
+    ports:
+      - "3004:3004"
+    container_name: mf-catalog
+    command: npm run start
+
+  mf-news:
+    build:
+      context: ./news
+    ports:
+      - "3005:3005"
+    container_name: mf-news
+    command: npm run start
+
+  mf-command:
+    build:
+      context: ./command
+    ports:
+      - "3006:3006"
+    container_name: mf-command
+    command: npm run start
+
+  mf-alfa-portal:
+    build:
+      context: "./alfa-portal"
+    ports:
+      - "3007:3007"
+    container_name: mf-alfa-portal
     command: npm run start
