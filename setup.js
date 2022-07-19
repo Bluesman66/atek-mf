@@ -48,3 +48,11 @@ cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: commandPath, stdio: 
 // alfa-portal
 var alfaPortalPath = resolve(__dirname, "./alfa-portal");
 cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: alfaPortalPath, stdio: "inherit" });
+
+// header
+var headerPath = resolve(__dirname, "./header");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: headerPath, stdio: "inherit" });
+
+// footer
+var footerPath = resolve(__dirname, "./footer");
+cp.spawn(npmCmd, ["run", "start"], { env: process.env, cwd: footerPath, stdio: "inherit" });

@@ -39,3 +39,19 @@ services:
       - "3004:3004"
     container_name: mf-alfa-portal
     command: npm run start
+
+  mf-header:
+    build:
+      context: "./header"
+    ports:
+      - "3005:3005"
+    container_name: mf-header
+    command: npm run start
+
+  mf-footer:
+    build:
+      context: "./footer"
+    ports:
+      - "3006:3006"
+    container_name: mf-footer
+    command: npm run start
