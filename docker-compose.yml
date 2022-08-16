@@ -1,41 +1,113 @@
 version: "3.8"
 services:
-  mf-home:
+  mf-host:
     build:
-      context: ./home
+      context: ./host
     ports:
       - "3000:3000"
-    container_name: mf-home
+    container_name: mf-host
+    command: npm run start
+
+  mf-layouts:
+    build:
+      context: ./layouts
+    ports:
+      - "3001:3001"
+    container_name: mf-layouts
+    command: npm run start
+
+  mf-cabinet:
+    build:
+      context: "./cabinet"
+    ports:
+      - "3002:3002"
+    container_name: mf-cabinet
     command: npm run start
 
   mf-catalog:
     build:
       context: ./catalog
     ports:
-      - "3001:3001"
+      - "3003:3003"
     container_name: mf-catalog
+    command: npm run start
+
+  mf-chat:
+    build:
+      context: "./chat"
+    ports:
+      - "3004:3004"
+    container_name: mf-chat
+    command: npm run start
+
+  mf-constructor:
+    build:
+      context: "./constructor"
+    ports:
+      - "3005:3005"
+    container_name: mf-constructor
+    command: npm run start
+
+  mf-contact:
+    build:
+      context: "./contact"
+    ports:
+      - "3006:3006"
+    container_name: mf-contact
+    command: npm run start
+
+  mf-equipment:
+    build:
+      context: "./equipment"
+    ports:
+      - "3007:3007"
+    container_name: mf-equipment
     command: npm run start
 
   mf-news:
     build:
       context: ./news
     ports:
-      - "3002:3002"
+      - "3008:3008"
     container_name: mf-news
     command: npm run start
 
-  mf-command:
+  mf-search:
     build:
-      context: ./command
+      context: ./search
     ports:
-      - "3003:3003"
-    container_name: mf-command
+      - "3009:3009"
+    container_name: mf-search
     command: npm run start
 
-  mf-alfa-portal:
+  mf-support:
     build:
-      context: "./alfa-portal"
+      context: "./support"
     ports:
-      - "3004:3004"
-    container_name: mf-alfa-portal
+      - "3010:3010"
+    container_name: mf-support
+    command: npm run start
+
+  mf-user:
+    build:
+      context: "./user"
+    ports:
+      - "3011:3011"
+    container_name: mf-user
+    command: npm run start
+
+  mf-widget:
+    build:
+      context: "./widget"
+    ports:
+      - "3012:3012"
+    container_name: mf-widget
+    command: npm run start
+
+  mf-wishlist:
+    build:
+      context: "./wishlist"
+    ports:
+      - "3013:3013"
+    container_name: mf-wishlist
     command: npm run start
